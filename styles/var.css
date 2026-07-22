@@ -37,6 +37,9 @@
     --icon-lg: 24px;
     --icon-xl: 48px;
     --icon-xxl: 52px;
+    --radius-md: 30px;
+    --radius-sm: 15px;
+    --font-weight-semibold : 600;
 }/* e:root */
 
 /* 공통 디자인 class */
