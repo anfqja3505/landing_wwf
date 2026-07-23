@@ -11,6 +11,7 @@
     /* 글자크기 */
     --m-font-size-base : 1em; /* 내용 */
     --m-font-size-sm : 0.875em; /* 버튼 */
+    --m-font-size-md : 1.75em; /* 보조제목 */
     --m-font-size-lg : 2em; /* 제목 */
     --t-font-size-base :1.5em;
     --t-font-size-sm :1.25em;
@@ -43,6 +44,58 @@
 }/* e:root */
 
 /* 공통 디자인 class */
+/* ===========================공통 후원/질문 버튼(모바일) */
+.sponser_btn,
+.sponser_qna_btn {
+    background-color: var(--color-primary); /* 후원버튼  */
+    padding: 3px 15px;
+    color: var(--color-light);
+    font-size: var(--font-size-xs);
+    border-radius: 15px;
+    position: relative;
+    gap: 10px;
+    display: block;
+}
+.sponser_btn::after, /* 후원버튼 화살표 */
+.sponser_qna_btn::after {
+    content: ''; display: block;
+    width: 12px; height: 24px;
+    background-image: url(../images/arrow.svg);
+    background-size: 100%;
+}
+/* ==========================공통 후원/질문(태블릿) */
+@media screen and (min-width:760px) {
+    .sponser_btn, .sponser_qna_btn {
+    font-size: var(--t-font-size-sm);
+    padding: 0;
+    border-radius: 0;
+    }
+    .sponser_btn::after, .sponser_qna_btn::after {width: 16px; height: 32px;}
+    .sponser_btn {
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
+    .sponser_qna_btn {
+        padding: 3px 15px;
+        border-radius: 20px;
+        position: absolute;
+        right:57px; bottom: 37px;
+        
+    }
+}
+/* ==========================공통 후원/질문(데스크탑) */
+@media screen and (min-width:1120px) {
+    .sponser_btn, .sponser_qna_btn {font-size: var(--d-font-size-sm);}
+    .sponser_btn::after, .sponser_qna_btn::after {width: 18px; height: 36px;}
+    .sponser_btn {}
+    .sponser_qna_btn {
+        padding: 5px 15px;
+        position: absolute;
+        right:0; bottom: 53px;
+    }
+}
+
+
 .flex-row-center {
     display: flex; flex-flow: row nowrap;
     justify-content: center; align-items: center;
@@ -58,4 +111,8 @@
 .flex-col-between {
     display: flex; flex-flow: column nowrap;
     justify-content: space-between; align-items: center;
+}
+.flex-col-start {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between; align-items: flex-start;
 }

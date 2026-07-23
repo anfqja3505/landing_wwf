@@ -29,26 +29,6 @@
         /* absolute 해체 목적의 변경값 -> static (포지션 기능 해제) */
         bottom: 0;
     }
-    #wrap .intro  .container .btn_g a {
-        font-size: var(--t-font-size-sm);
-        padding: 0;
-        border-radius: 0;
-    }
-    #wrap .intro  .container .btn_g a::after {
-        width: 16px; height: 32px;
-    }
-    #wrap .intro  .container .btn_g .sponser_btn {
-        padding: 20px 50px;
-        border-radius: 40px;
-    }
-    #wrap .intro  .container .btn_g .sponser_qna_btn {
-        padding: 3px 15px;
-        border-radius: 20px;
-        position: absolute;
-        right:57px; bottom: 37px;
-        
-    }
-
     /* ============================================2행 퀴즈(태블릿 시작) */
     #wrap .quiz {
     padding: 70px var(--spacing-t-l-r);
@@ -59,7 +39,6 @@
         justify-content: space-between; /* 수평양끝 */
         gap: 50px;
     }
-    
     /* =====================================2행 2-1. 퀴즈 */
     #wrap .quiz .container #quiz_frm {
         margin-bottom: 50px;
@@ -90,9 +69,35 @@
     #wrap .quiz .container .quiz_status .quiz_status_deep p {font-size: var(--t-font-size-lg);}
     #wrap .quiz .container .quiz_status .quiz_status_deep p em {}
     #wrap .quiz .container .quiz_status .update {font-size: var(--t-font-size-sm);}
-
     /* ============================================2행 퀴즈(태블릿 종료) */
+    /* ============================================3행 비디오(태블릿 시작) */
+    #wrap .video_bg {
+    padding: 70px 60px;
+    }
+    #wrap .video_bg .container {gap: 40px;}
+    #wrap .video_bg .container h1 {font-size: var(--t-font-size-lg);}
+    #wrap .video_bg .container .video {}
+    #wrap .video_bg .container .video iframe {}
+    #wrap .video_bg .container .sponser_btn {
+    padding: 20px 50px;
+    border-radius: 40px;
+    font-size: var(--t-font-size-sm);
+    }
+    /* ===========================================4행 정보(태블릿 시작) */
+    #wrap .reduce_info {padding: 70px 60px;}
+    #wrap .reduce_info .container {gap: 30px;}
+    #wrap .reduce_info .container * {}
+    #wrap .reduce_info .container h1 {}
+    #wrap .reduce_info .container h1 span {
+        font-size: var(--t-font-size-lg);
+        display: inline;
+    }
+    #wrap .reduce_info .container h1 span em {}
+    #wrap .reduce_info .container .detail {font-size: var(--t-font-size-sm);}
+    #wrap .reduce_info .container .thum {height: 500px;}
+    #wrap .reduce_info .container .thum img {}
 }/* e:min760 */
+
 /* ================================================태블릿->데스크탑 */
 @media screen and (min-width:1120px) {/* 1120이상일때 */
     #wrap {}
@@ -111,18 +116,7 @@
         margin-bottom: 48px;
     }
     #wrap .intro  .container .btn_g {}
-    #wrap .intro  .container .btn_g a {
-        font-size: var(--d-font-size-sm);
-    }
-    #wrap .intro  .container .btn_g a::after {
-        width: 18px; height: 36px;
-    }
-    #wrap .intro  .container .btn_g .sponser_btn {}
-    #wrap .intro  .container .btn_g .sponser_qna_btn {
-        padding: 5px 15px;
-        position: absolute;
-        right:0; bottom: 53px;
-    }
+    
     /* =============================================2행 시작(데스크탑) */
     #wrap .quiz {
     padding: 100px 0;
@@ -162,6 +156,31 @@
     }
     #wrap .quiz .container .quiz_status .quiz_status_deep p em {}
     #wrap .quiz .container .quiz_status .update {font-size: var(--d-font-size-sm);}
-
-    /* =============================================2행 종료(데스크탑) */   
-}/* e: min1120 */
+    /* =============================================2행 종료(데스크탑) */ 
+    /* =============================================3행 비디오(데스크탑) */
+    #wrap .video_bg {
+    padding: 100px 0;
+    }
+    #wrap .video_bg .container {
+        gap: 50px;
+        width: var(--width-desktop);
+        margin: var(--spacing-auto);
+    }
+    #wrap .video_bg .container h1 {font-size: var(--d-font-size-lg);}
+    #wrap .video_bg .container .video {}
+    #wrap .video_bg .container .video iframe {}
+    #wrap .video_bg .container .sponser_btn {font-size: var(--d-font-size-sm);}
+    /* ============================================4행 정보(데스크탑) */
+    #wrap .reduce_info {padding: 100px 0;}
+    #wrap .reduce_info .container {
+        width: var(--width-desktop);
+        margin: var(--spacing-auto);
+        gap: 30px;
+    }
+    #wrap .reduce_info .container * {}
+    #wrap .reduce_info .container h1 span {font-size: var(--d-font-size-lg);}
+    #wrap .reduce_info .container h1 span em {}
+    #wrap .reduce_info .container .detail {font-size: var(--d-font-size-sm);}
+    #wrap .reduce_info .container .thum {height: 700px;}
+    #wrap .reduce_info .container .thum img {}
+} /* e: min1120 */

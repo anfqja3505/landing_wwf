@@ -24,7 +24,7 @@ answer_popup_bg.style.display = 'none';
 quiz_btn.addEventListener('click',popupShow);
 
 function popupShow() { 
-    answer_popup_bg.style.display = 'block';
+    answer_popup_bg.style.display = 'flex';
 }
 
 /* 3. x 버튼 클릭 시 위 1번 대상 숨기기 */
