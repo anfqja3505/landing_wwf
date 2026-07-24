@@ -90,12 +90,11 @@
     #wrap .reduce_info .container h1 {}
     #wrap .reduce_info .container h1 span {
         font-size: var(--t-font-size-lg);
-        display: inline;
     }
     #wrap .reduce_info .container h1 span em {}
     #wrap .reduce_info .container .detail {font-size: var(--t-font-size-sm);}
     #wrap .reduce_info .container .thum {height: 500px;}
-    #wrap .reduce_info .container .thum img {}
+    #wrap .reduce_info .container .thum img {width: 100%;}
 }/* e:min760 */
 
 /* ================================================태블릿->데스크탑 */
@@ -166,7 +165,9 @@
         width: var(--width-desktop);
         margin: var(--spacing-auto);
     }
-    #wrap .video_bg .container h1 {font-size: var(--d-font-size-lg);}
+    #wrap .video_bg .container h1 {
+        font-size: var(--d-font-size-lg);
+    }
     #wrap .video_bg .container .video {}
     #wrap .video_bg .container .video iframe {}
     #wrap .video_bg .container .sponser_btn {font-size: var(--d-font-size-sm);}
@@ -177,7 +178,10 @@
         margin: var(--spacing-auto);
         gap: 30px;
     }
-    #wrap .reduce_info .container * {}
+    #wrap .reduce_info .container * {
+    }
+    #wrap .reduce_info .container h1 {
+}
     #wrap .reduce_info .container h1 span {font-size: var(--d-font-size-lg);}
     #wrap .reduce_info .container h1 span em {}
     #wrap .reduce_info .container .detail {font-size: var(--d-font-size-sm);}

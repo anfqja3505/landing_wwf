@@ -202,14 +202,21 @@
 }
 #wrap .reduce_info .container h1 {}
 #wrap .reduce_info .container h1 span {
-    display: block;
     font-size: var(--m-font-size-md);
     font-weight: var(--font-weight-semibold);
+    display: block;
 }
 #wrap .reduce_info .container h1 span em {
-    background-color: var(--color-light);
+    position: relative;
+    z-index: 1;
     color: var(--color-dark);
     font-weight: var(--font-weight-semibold);
+}
+#wrap .reduce_info .container h1 span em::after {
+    content: ''; display: block;
+    position: absolute; left: 0; top: 0; z-index: -1;
+    background: #fff;
+    width: 100%; height: 100%;
 }
 #wrap .reduce_info .container .detail {
     font-size: var(--m-font-size-sm);
